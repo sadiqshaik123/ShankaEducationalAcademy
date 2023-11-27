@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Shanka Educational Academy</title>
+        
+        <meta charset="utf-8">
+        <meta name="language" content="en-us"/>  
+        <meta http-equiv="Content-Type" content="text/html" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="distribution" content="Global" />
+        <meta http-equiv="Cache-control" content="public">
+        <meta name="robots" content="index, follow" />
+        
+        <meta name="copyright" content="Shanka Career Academy"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <meta name="description" content="SHANKA Career Academy is delighted to present this proposal for our comprehensive training  programs with a unique 100% placement assistance guarantee. We have a proven track  record of empowering individuals with the skills and knowledge needed to excel in their  careers. ">
+        <meta name="keywords" content="SHANKA,Career,Academy,Training, admission, study materials, facilities, students, contact" />
+        <meta name="author" content="RajkumarVasan">
+        <meta name="email" content="hr.shankaacademy.com">
+        
+        <meta property="og:type" content="website" /> 
+        <meta property="og:title" content="SHANKA Career Academy" />
+        <meta property="og:description" content="Our academy will cater to a diverse range of individuals, including recent graduates, career  changers, and those seeking to upskill or reskill to meet changing job market demands. " />
+        <meta property="og:site_name" content="Shanka Educational Academy" />
+        
+        
+        
+        <meta itemprop="name" content="Shanka Educational Academy">
+        
+        <link rel="shortcut icon" href="./images/mainlogo.png" type="image/png" />
+        <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+            
+        <!--css-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <link rel="stylesheet" href="css/ken-burns.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="css/animate.min.css" type="text/css" media="all" />
+        <!--css-->
+        <script src="path/to/jquery/jquery.min.js"></script>
+        <script src="path/to/bootstrap/js/bootstrap.min.js"></script>
+        
+        <!--google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <!-- google fonts-->
+        <style>
+            .courses-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding-left: 6em;
+            padding-right: 6em;
+            background-color: #27358f;
+            padding-bottom: 3em;
+        }
+
+        .course-container2 {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin: 10px;
+            padding: 20px;
+            width: 100%;
+            height: 10vh; /* 10% of the screen height */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .course-container2:hover {
+            transform: scale(1.05); /* Zoom in effect on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase box-shadow on hover */
+        }
+
+        .course-number {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .course-name {
+            font-size: 1.5em;
+            margin: 0 10px;
+        }
+
+        .details-button {
+            background-color: #bc000a;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .details-button:hover {
+            background-color: #27358f;
+        }
+        .col-md-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .container8 {
+            display: flex;
+            gap: 10px; 
+            padding-left: 6em; 
+            padding-right: 6em; 
+            padding-bottom: 3em;
+            
+        }
+
+        .column8 {
+            flex: 1;
+            
+            width: 100%;
+            
+        }
+        .details-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+            .details-popup.show {
+            display: block;
+            opacity: 1;
+        }
+
+            /* Styles for the close button */
+            .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+            backdrop-filter: blur(8px); /* Blur effect for the background */
+            z-index: 999; /* Set z-index lower than the form popup */
+        }
+
+        .overlay.show {
+            display: block;
+        }
+        .containerabout {
+            display: flex;
+            padding-left: 6em;
+            padding-right: 6em;
+        }
+
+        .left-columnabout {
+            width: 60%;
+            padding: 20px;
+        }
+
+        .right-columnabout {
+            width: 40%;
+            padding: 20px;
+        }
+        @media (max-width: 767px) {
+            .courses-wrapper {
+                padding-left: 1em;
+                padding-right: 1em;
+            }
+
+            .container8 {
+                flex-direction: column;
+                padding-left: 1.2em;
+                padding-right: 1.2em;
+                padding-bottom: 1em;
+                
+            }
+            .containerabout {
+                flex-direction: column;
+                padding-left: 1.2em;
+                padding-right: 1.2em;
+            }
+
+            .left-columnabout,
+            .right-columnabout {
+                width: 100%;
+                padding: 10px; /* Adjust padding for smaller screens */
+            }
+            .details-button {
+                padding: 8px; /* Adjust padding for smaller screens */
+                max-width: 50px; /* Set a maximum width for the button */
+                font-size: 10px;
+                width: 100%;
+            }
+            .course-container2 {
+                padding: 10px; 
+                font-size: 10px;
+                font-weight: bold;
+            }
+            .details-popup {
+                width: 80%;
+                max-width: 300px;
+                padding: 10px;
+            }
+
+            .close-btn {
+                top: 5px;
+                right: 5px;
+            }
+            .details-content p {
+                font-size: 1em;
+            }
+            .details-content h2 {
+                font-size: 1em;
+            }
+            .course-name {
+            font-size: 1.25em;
+            font-weight: bold;
+            text-align: center;
+            margin: 0 10px;
+        }
+        }
+        .list-container {
+            max-height: 150; /* Set your desired max height */
+            overflow-y: auto;
+        }
+
+        .list-item {
+            list-style: none;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .list-item i {
+            margin-right: 10px;
+            color: #bc000a;
+        }
+        @media only screen and (max-width: 767px) {
+
+            .list-item {
+                font-size: 16px;
+            }
+        }
+        
+        </style>
+        
+    </head>
+<body>
+    <div class="header" id="top">
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+               <img src="./images/mainlogo.png" class="logo">
+               <a href="index.html"><img src="./images/Logoname.PNG" alt="SHANKA Educational Academy Logo" class="logoname"></a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>				  
+                
+            </div>
+
+    <!-- nav bar collapse -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <nav class="link-effect-2" id="link-effect-2">
+                    <ul class="nav navbar-nav">
+                        <li ><a href="index.html"><span data-hover="Home">Home</span></a></li>
+                        <li ><a href="about.html"><span data-hover="About us">About us</span></a></li>
+                        <li><a href="courses.html"><span data-hover="Courses">Courses</span></a></li>
+                        <li class="active"><a href="admission.html"><span data-hover="Admission">Admission</span></a></li>
+                        <li><a href="contact.html"><span data-hover="Contact">Contact</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        
+        </nav>
+    </div>
+    <header>
+        <img src="./images/banneradmis.jpg" alt="Banner"  class="tamil">
+    </header>
+    <h2 class="tittle3" style="padding-bottom: 1.5em;">Admission</h2>
+
+    <div class="containerabout">
+        <div class="left-columnabout">
+            <p align="justify"><strong>Shanka Educational Academy</strong> is your gateway to a world of learning and career advancement. With an array of comprehensive courses, including Digital Marketing, HR Certification, Spoken English and Employment Training, DCA (Diploma in Computer Applications), GST, Taxation, and Auditing, and Accounting Software, our institution is dedicated to nurturing your skills and knowledge in a dynamic and innovative environment. Our expert instructors, versatile curriculum, hands-on learning, and recognized certifications empower you to excel in today's competitive landscape. Whether you're seeking personal growth, career development, or entrepreneurial success, Shanka Educational Academy provides the tools and expertise to turn your aspirations into achievements. Don't miss the opportunity to elevate your skills and career prospects.</p>
+            <br/>
+            <p align="justify">At <strong>Shanka Educational Academy</strong>, admissions are granted through a comprehensive admission test designed to ensuring a strong foundation for our diverse courses, including Digital Marketing, HR Certification, Spoken English and Employment Training, DCA (Diploma in Computer Applications), GST, Taxation, Auditing, and Accounting Software. To register, you can easily submit your details online through our registration form. We'll keep you updated on the test date and the specific topics to be covered via SMS. Additionally, we offer the convenience of an online admission test for your flexibility.</p>
+                    
+        </div>
+        <div class="right-columnabout">
+            <img src="./images/admissionimage.jpg" alt="Image" style="width: 100%; padding-top: 25%;">
+        </div>
+    </div>
+    <h2 class="tittle3" style="color: #000; padding-bottom: 1em;">Course Details</h2>
+    <div class="courses-wrapper" >
+        
+        <div class="course-container2">
+            <div class="course-number">#1</div>
+            <div class="course-name">Diploma in Office Accounting</div>
+            <button class="details-button" onclick="openDetailsPopup('course1')">Course Details</button>
+        </div>
+
+        <div class="course-container2">
+            <div class="course-number">#2</div>
+            <div class="course-name">Tally & Taxation</div>
+            <button class="details-button" onclick="openDetailsPopup('course2')">Course Details</button>
+        </div>
+
+        <div class="course-container2">
+            <div class="course-number">#3</div>
+            <div class="course-name">Structure of GST & Filing</div>
+            <button class="details-button" onclick="openDetailsPopup('course3')">Course Details</button>
+        </div>
+        <div class="course-container2">
+            <div class="course-number">#4</div>
+            <div class="course-name">Master Diploma in Computer Application</div>
+            <button class="details-button" onclick="openDetailsPopup('course4')">Course Details</button>
+        </div>
+
+        <div class="course-container2">
+            <div class="course-number">#5</div>
+            <div class="course-name">Computer Basics and Type Writing (School Students)</div>
+            <button class="details-button" onclick="openDetailsPopup('course5')">Course Details</button>
+        </div>
+
+        <div class="course-container2">
+            <div class="course-number">#6</div>
+            <div class="course-name">Spoken English ( Beginners Level )</div>
+            <button class="details-button" onclick="openDetailsPopup('course6')">Course Details</button>
+        </div>
+        <div class="course-container2">
+            <div class="course-number">#7</div>
+            <div class="course-name">Spoken English ( Advanced Level )</div>
+            <button class="details-button" onclick="openDetailsPopup('course7')">Course Details</button>
+        </div>
+
+        <div class="course-container2">
+            <div class="course-number">#8</div>
+            <div class="course-name">French Lessons</div>
+            <button class="details-button" onclick="openDetailsPopup('course8')">Course Details</button>
+        </div>
+
+        <div class="course-container2">
+            <div class="course-number">#9</div>
+            <div class="course-name">Spoken Hindi</div>
+            <button class="details-button" onclick="openDetailsPopup('course9')">Course Details</button>
+        </div>
+        <div class="course-container2">
+            <div class="course-number">#10</div>
+            <div class="course-name">Comprehensive Career Development</div>
+            <button class="details-button" onclick="openDetailsPopup('course10')">Course Details</button>
+        </div>
+
+        <div class="course-container2">
+            <div class="course-number">#11</div>
+            <div class="course-name">Digital Marketing</div>
+            <button class="details-button" onclick="openDetailsPopup('course11')">Course Details</button>
+        </div>
+    </div>
+
+    <div id="course1-details-popup" class="details-popup">
+        <span class="close-btn" onclick="closeDetailsPopup('course1')"> &times;</span>
+        <h2 class="tittle5">Diploma in Office Accounting</h2>
+        <p align="left">Syllabus:</p>
+        <div class="list-container">
+            <ul>
+                <li class="list-item"><i class="fas fa-chevron-circle-right"></i> Windows</li>
+                <li class="list-item"><i class="fas fa-chevron-circle-right"></i> MS Word</li>
+                <li class="list-item"><i class="fas fa-chevron-circle-right"></i> MS Excel</li>
+                <li class="list-item"><i class="fas fa-chevron-circle-right"></i> MS Powerpoint</li>
+                <li class="list-item"><i class="fas fa-chevron-circle-right"></i> Internet</li>
+                <li class="list-item"><i class="fas fa-chevron-circle-right"></i> Tally</li>
+                
+            </ul>
+        </div>
+    </div>
+    <div id="course2-details-popup" class="details-popup">
+        <span class="close-btn" onclick="closeDetailsPopup('course2')"> &times;</span>
+        <h2 class="tittle5" style="color: #000;">Tally & Taxation</h2>
+        <p align="left" >Syllabus:</p>
+               
+        <div class="list-container">
+            <ul>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Principle of Accounts</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Basic Accounting</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Masters</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Accounting Vouchers</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Advance Accounting</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Advance Inventory</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> GST Introduction</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Structure of GST</li>
+            
+            </ul>
+        </div>
+        
+    </div>
+    <div id="course3-details-popup" class="details-popup">
+        <span class="close-btn" onclick="closeDetailsPopup('course3')"> &times;</span>
+        <h2 class="tittle5" style="color: #000;">Structure of GST & Filing</h2>
+        <p align="left" >Syllabus:</p>
+               
+        <div class="list-container">
+            <ul>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> TDS</li>
+                    <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> TCS</li>
+                    <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> PF & ESI</li>
+                    <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Internal Auditing</li>
+                
+            </ul>
+        </div>
+        
+    </div>
+    <div id="course4-details-popup" class="details-popup">
+        <span class="close-btn" onclick="closeDetailsPopup('course4')"> &times;</span>
+        <h2 class="tittle5" style="color: #000;">Master Diploma in Computer Application</h2>
+        <p align="left" >Syllabus:</p>
+               
+        <div class="list-container">
+            <ul>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Windows</li>
+                    <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> MS Word</li>
+                    <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> MS Excel</li>
+                    <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> MS Powerpoint</li>
+                    <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Internet</li>
+                    <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> C Programming</li>
+                    <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Core basics and Java</li>
+                    <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> My SQL</li>
+                    <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> HTML</li>
+                    <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Python</li>
+                    <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Typewriting</li>
+                
+            </ul>
+        </div>
+
+        
+    </div>
+    <div id="course5-details-popup" class="details-popup">
+        <span class="close-btn" onclick="closeDetailsPopup('course5')"> &times;</span>
+        <h2 class="tittle5" style="color: #000;">Computer Basics and Type Writing</h2>
+        <h2 class="tittle5" style="color: #000;">( School Students )</h2>
+        <p align="left" >Syllabus:</p>
+        <div class="list-container">
+            <ul>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> MS Word</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> MS Excel</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> MS Powerpoint</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Internet</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Typewriting</li>
+                
+            </ul>
+        </div>
+        
+    </div>
+
+    <div id="course6-details-popup" class="details-popup">
+        <span class="close-btn" onclick="closeDetailsPopup('course6')"> &times;</span>
+        <h2 class="tittle5" style="color: #000;">Spoken English ( Beginners Level )</h2>
+        <p align="left" >Syllabus:</p>
+        <div class="list-container">
+            <ul>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Basic Conversation Skills</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Vocabulary Building</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Grammar Fundamentals</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Listening and Pronunciation</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Role - Play & Scenarios</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Writing Skills</li>
+                
+            </ul>
+        </div>
+        
+    </div>
+    <div id="course7-details-popup" class="details-popup">
+        <span class="close-btn" onclick="closeDetailsPopup('course7')"> &times;</span>
+        <h2 class="tittle5" style="color: #000;">Spoken English ( Advanced Level )</h2>
+        <p align="left" >Syllabus:</p>
+        <div class="list-container">
+            <ul>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Advanced Vocabulary and Idions</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Advanced Grammer and Syntax</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Business English</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Debates and Public Speaking</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Literary and Media Analysis</li>
+                
+            </ul>
+        </div>
+        
+    </div>
+    <div id="course8-details-popup" class="details-popup">
+        <span class="close-btn" onclick="closeDetailsPopup('course8')"> &times;</span>
+        <h2 class="tittle5" style="color: #000;">French Lessons</h2>
+        <p align="left" >Syllabus:</p>
+        <div class="list-container">
+            <ul>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Vocabulary</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Grammar</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Conversation</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Reading</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Speaking</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Listening</li>
+                    
+            </ul>
+        </div>
+        
+    </div>
+    <div id="course9-details-popup" class="details-popup">
+        <span class="close-btn" onclick="closeDetailsPopup('course9')"> &times;</span>
+        <h2 class="tittle5" style="color: #000;">Spoken Hindi</h2>
+        <p align="left" >Syllabus:</p>
+        <div class="list-container">
+            <ul>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Hindi Grammar</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Pronunciation</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Conversation</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Vocabulary</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Certificate Level Courses</li>
+                
+            </ul>
+        </div>
+        
+    </div>
+    <div id="course10-details-popup" class="details-popup">
+        <span class="close-btn" onclick="closeDetailsPopup('course10')"> &times;</span>
+        <h2 class="tittle5" style="color: #000;">Comprehensive Career Development</h2>
+        <p align="left" >Syllabus:</p>
+        <div class="list-container">
+            <ul>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Communication Skills</li>
+                    <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Resume Building</li>
+                    <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Job Search Strategies</li>
+                    <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Mock Interviews</li>
+                    <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Business Communication</li>
+                    <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Business Ethics</li>
+                    <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Creativity Skills</li>
+                    <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Presentation Skills</li>
+                    <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Group Dicussion</li>
+                
+            </ul>
+        </div>
+        
+    </div>
+    <div id="course11-details-popup" class="details-popup">
+        <span class="close-btn" onclick="closeDetailsPopup('course11')"> &times;</span>
+        <h2 class="tittle5" style="color: #000;">Digital Marketing</h2>
+        <p align="left" >Syllabus:</p>
+        <div class="list-container">
+            <ul>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Marketing Techniques</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Digital Marketing</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> SEO Optimization</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Social Media Optimization</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Online Repution Management</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Content Marketing</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Management Techniques</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Tools & Techniques</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Results Tracking</li>
+                <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Digital Marketing Opportunity</li>
+           
+            </ul>
+        </div>
+        
+    </div>
+
+
+    <div style="padding-bottom: 3em; padding-top: 3em;">
+        <h2 class="tittle3">Registration Form</h2>
+    <br/>
+    <center><h1 style="color: #070A52; font-size: 1.5em;">Are you excited to join us?</h1></center>
+    </div>
+    
+    <!--<div class="container" style="padding-top: 3em; padding-bottom: 3em;">
+        <div class="col-md-6">
+          <p align="center" style="color: #000"><strong>KINDLY FILL THE FORM TO REGISTER YOURSELF!</strong></p>
+          <div class="form-style-5">
+            <form action="https://script.google.com/macros/s/AKfycbxP3dZh_kZeCxh2eT1n7wKalnQAYGoTFNRAMZruHIrKAyx32D11QGQ-_h2rMI7dQhw/exec" method="POST" name="admission">
+            <fieldset>
+            
+            <input type="text" name="name"  id="name" placeholder="Your Name *" required>
+            <input type="text" name="fathername"  id="fname" placeholder="Father's Name *" required>
+            <input type="text" name="degree"  id="degree" placeholder="Degree *" required>
+            <label for="job">Date of Birth:</label>
+            <input type="date" name="dob" id="dob" placeholder="Date of Birth *" required>
+            <textarea name="About" placeholder="About yourself"></textarea> 
+            </fieldset>
+            <fieldset>
+            <label for="job">Select Course:</label>
+            <select id="job" name="course">
+            <optgroup label="All Courses">
+            <option value="Select">Select Course</option>
+            <option value="Diploma in Office Accounting">Diploma in Office Accounting</option>
+            <option value="Tally & Taxation">Tally & Taxation</option>
+            <option value="Structure of GST & Filing ">Structure of GST & Filing </option>
+            <option value="Master Diploma in Computer Application">Master Diploma in Computer Application</option>
+            <option value="Computer Basics and Type Writing ( School Students )">Computer Basics and Type Writing ( School Students )</option>
+            <option value="Spoken English ( Beginner Level )">Spoken English ( Beginner Level )</option>
+            <option value="Spoken English ( Advanced Level )">Spoken English ( Advanced Level )</option>
+            <option value="French Lessons">French Lessons</option>
+            <option value="Spoken Hindi">Spoken Hindi</option>
+            <option value="Comprehensive Career Development">Comprehensive Career Development</option>
+            <option value="Digital Marketing">Digital Marketing</option>
+            </optgroup>
+
+            </select>
+            </fieldset>
+            <fieldset>
+            
+            <input type="text" name="phone"  id="phone" placeholder="Contact Number*" required>
+            <input type="email" name="email" id="email" placeholder="Email*"required>
+            <textarea name="Address" placeholder="Address" style="height: 100px;"></textarea>
+            </fieldset>
+            <input type="submit" value="Register" />
+            </form>
+            </div>
+          
+        </div>
+        
+        <div class="col-md-6" >
+          <p align="center"style="color: #000"><strong>INSTRUCTIONS FOR FILLING REGISTRATION FORM</strong></p>
+            <br/>
+         
+            <p align="left">
+            <ul class="grid-part1">
+                <li><i class="glyphicon glyphicon-hand-right"> </i> Fields marked with * are mandatory fields.</li>
+                <li><i class="glyphicon glyphicon-hand-right"> </i> Please note that above information will be used during the entire admission process, no changes/modifications will be possible in any circumstances. Please be careful in filling up the required information in all aspects.</li>
+                <li><i class="glyphicon glyphicon-hand-right"> </i> For the course code, you can refer to the section above the registration form or you can also <a href="./Documents/Gateway- proposal prospects.pdf">download</a> our brochure. </li>
+                <li><i class="glyphicon glyphicon-hand-right"> </i> Two recent photographs of the candidate will be required during the admission process. Send photographs to our office. Our address is <strong>10A, Jamaliya Nagar, Jamaliya, Perambur, Chennai - 600012</strong></li>
+                <li><i class="glyphicon glyphicon-hand-right"> </i> Please contact our office if you want to apply offline for any of the courses. You can also call us at <strong>+91-9345702226, +91-7358404017</strong>. You can mail us your details to enquiry@shankaacademy.com.</li>
+                <li><i class="glyphicon glyphicon-hand-right"> </i> Your registration will be incomplete if you fail to provide us the required information or you have not followed our instructions. The registration form will not be considered.</li>
+                
+                </ul>
+            </p>
+            <br/>
+        </div>
+    </div>-->
+    <div class="container8" >
+
+        <div class="column8" >
+          <!-- Content for the first column -->
+            <p align="justify" style="color: #000; padding-left: 3em;"><strong>Kindly fill the form to register yourself!</strong></p>
+            <div class="form-style-5">
+              <form action="https://script.google.com/macros/s/AKfycbxP3dZh_kZeCxh2eT1n7wKalnQAYGoTFNRAMZruHIrKAyx32D11QGQ-_h2rMI7dQhw/exec" method="POST" name="admission">
+              <fieldset>
+              
+              <input type="text" name="name"  id="name" placeholder="Your Name *" required>
+              <input type="text" name="fathername"  id="fname" placeholder="Father's Name *" required>
+              <input type="text" name="degree"  id="degree" placeholder="Degree *" required>
+              <label for="job">Date of Birth:</label>
+              <input type="date" name="dob" id="dob" placeholder="Date of Birth *" required>
+              <textarea name="About" placeholder="About yourself"></textarea> 
+              </fieldset>
+              <fieldset>
+              <label for="job">Select Course:</label>
+              <select id="job" name="course">
+              <optgroup label="All Courses">
+              <option value="Select">Select Course</option>
+              <option value="Diploma in Office Accounting">Diploma in Office Accounting</option>
+              <option value="Tally & Taxation">Tally & Taxation</option>
+              <option value="Structure of GST & Filing ">Structure of GST & Filing </option>
+              <option value="Master Diploma in Computer Application">Master Diploma in Computer Application</option>
+              <option value="Computer Basics and Type Writing ( School Students )">Computer Basics and Type Writing ( School Students )</option>
+              <option value="Spoken English ( Beginner Level )">Spoken English ( Beginner Level )</option>
+              <option value="Spoken English ( Advanced Level )">Spoken English ( Advanced Level )</option>
+              <option value="French Lessons">French Lessons</option>
+              <option value="Spoken Hindi">Spoken Hindi</option>
+              <option value="Comprehensive Career Development">Comprehensive Career Development</option>
+              <option value="Digital Marketing">Digital Marketing</option>
+              </optgroup>
+  
+              </select>
+              </fieldset>
+              <fieldset>
+              
+              <input type="text" name="phone"  id="phone" placeholder="Contact Number*" required>
+              <input type="email" name="email" id="email" placeholder="Email*"required>
+              <textarea name="Address" placeholder="Address" style="height: 50px;"></textarea>
+              </fieldset>
+              <input type="submit" value="Register" />
+              </form>
+              </div>
+            
+          </div>
+        
+        
+        <div class="column8">
+          <!-- Content for the second column -->
+            <p align="center"style="color: #000"><strong>Instructions for filling registration form</strong></p>
+              <br/>
+           
+              <p align="justify">
+              <ul class="grid-part1">
+                  <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Fields marked with * are mandatory fields.</li>
+                  <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Please note that above information will be used during the entire admission process, no changes/modifications will be possible in any circumstances. Please be careful in filling up the required information in all aspects.</li>
+                  <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> For the course code, you can refer to the section above the registration form or you can also <a href="./Documents/Gateway- proposal prospects.pdf">download</a> our brochure. </li>
+                  <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Two recent photographs of the candidate will be required during the admission process. Send photographs to our office. Our address is <strong>10A, Jamaliya Nagar, Jamaliya, Perambur, Chennai - 600012</strong></li>
+                  <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Please contact our office if you want to apply offline for any of the courses. You can also call us at <strong>+91-9345702226, +91-7358404017</strong>. You can mail us your details to enquiry@shankaacademy.com.</li>
+                  <li><i class="fas fa-chevron-circle-right" style="color: #bc000a;"></i> Your registration will be incomplete if you fail to provide us the required information or you have not followed our instructions. The registration form will not be considered.</li>
+                  
+               </ul>
+              </p>
+              <br/>
+        </div>
+      </div>
+    
+      <div class="placement" style="background-image: url('./images/wave.png');">
+        <div class="title" style="color: #000;">100% Placement Assistance</div>
+        
+        <div class="columns">
+          <div class="column">
+            <div class="column-content">
+                <h2 align="center" style="font-size: 1.5em;">Job Placement</h2>
+                <ul class="grid-part">
+                    <li>    Personal Career Counselling </li>
+                    <li>    Resume Building </li>
+                    <li>    Interview Preparation </li>
+                    <li>    Job Search Support </li>
+                    <li>    Industry Connections </li>
+                    
+                  </ul>
+            </div>
+          </div>
+    
+          <div class="column">
+            
+            <div class="column-content">
+                <h2 align="center" style="font-size: 1.5em;">Services Offered</h2>
+                <ul class="grid-part">
+                    <li>    Professional Development </li>
+                    <li>    Certification Programs </li>
+                    <li>    Career-Ready Skills </li>
+                    <li>    Job-Specific Training </li>
+                    <li>    Placement Assistance </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="contact-container">
+        <div class="contact-column">
+            <img src="./images/Logonamefooter.png" alt="Logo" class="contactlogo">
+        </div>
+        <div class="contact-column" style="text-align: center;">
+            <div class="contact-title"><h2 style="font-size: 2em;">Contact</h2></div>
+            <p style="color: #616161;"><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>  +91 9345702226</p>
+            <p style="color: #616161;"><i class="glyphicon glyphicon-envelope" aria-hidden="true" ></i><a href="mailto:enquiry@shankaacademy.com" style="color: #000;">  enquiry@shankaacademy.com</a></p>
+        </div>
+        <div class="contact-column" style="text-align: center;">
+            <h2 align="center" style="font-size: 2em;">Reach US</h2>
+            <p align="center" style="color: #616161;"><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>   No:10/a, Jamaliya Nagar, Jamaliya</p>
+            <p align="center" style="color: #616161;">   Perambur, Chennai - 600012</p>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="left-column1">
+          <div class="copyright-symbol">&#169;</div>
+          <div>All Rights Reserved</div>
+        </div>
+    
+        <div class="middle-column">
+            <div class="social-media-icons">
+              <div class="social-media-icon">
+                <i class="fab fa-facebook" aria-hidden="true" class="socialicon123"></i>
+              </div>
+              <div class="social-media-icon">
+                <i class="fab fa-twitter" aria-hidden="true" class="socialicon123"></i>
+              </div>
+              <div class="social-media-icon">
+                <i class="fab fa-instagram" aria-hidden="true" class="socialicon123"></i>
+              </div>
+              <div class="social-media-icon">
+                <i class="fab fa-linkedin" aria-hidden="true" class="socialicon123"></i>
+              </div>
+            </div>
+          </div>
+    
+        <div class="right-column1">
+          <p><div class="designed-developed">
+            Designed and Developed by  <span class="heart-emoji">&#10084;</span>
+         
+          
+            <a href="https://www.linkedin.com/in/sadiqshaik123/" target="_blank" rel="noopener noreferrer" style="color: #fff;">Sadiq</a></div></p>
+          
+        </div>
+      </div>  
+      <div id="overlay" class="overlay"></div>
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxP3dZh_kZeCxh2eT1n7wKalnQAYGoTFNRAMZruHIrKAyx32D11QGQ-_h2rMI7dQhw/exec'
+
+        const form = document.forms['admission']
+
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Thank you! your form is submitted successfully." ))
+        .then(() => { window.location.reload(); })
+        .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+      <script>
+        function openDetailsPopup(courseId) {
+            var detailsPopup = document.getElementById(courseId + '-details-popup');
+            var overlay = document.getElementById('overlay');
+
+            if (detailsPopup && overlay) {
+                detailsPopup.classList.add('show');
+                overlay.classList.add('show');
+            }
+            }
+
+            function closeDetailsPopup(courseId) {
+            var detailsPopup = document.getElementById(courseId + '-details-popup');
+            var overlay = document.getElementById('overlay');
+
+            if (detailsPopup && overlay) {
+                detailsPopup.classList.remove('show');
+                overlay.classList.remove('show');
+            }
+        }
+
+      </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var navbarToggle = document.querySelector('.navbar-toggle');
+            var navbarCollapse = document.querySelector('.navbar-collapse');
+
+            navbarToggle.addEventListener('click', function() {
+                navbarCollapse.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>
